@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mayur Registration App</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h2 class="mt-5">Login Here...</h2>
+
+
+		<font style="color: red;">
+			<p th:text="${errMsg}"></p>
+		</font>
+		
+		<form action="login" method="post" th:object="${login}">
+			<table>
+				<tr>
+					<td>Email:</td>
+					<td><input type="text" th:field="*{email}">
+					<td />
+				</tr>
+
+				<tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="text" th:field="*{password}" /></td>
+				</tr>
+
+				<td><input type="submit" value="Sign-In"
+					class="btn btn-primary" />
+				<td />
+			</table>
+		</form>
+
+		Don't have an Account..? <a href="/registerPage">Sign-Up Here</a> &nbsp;
+		&nbsp; &nbsp;
+	</div>
+</body>
+</html>
